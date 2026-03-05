@@ -1,0 +1,57 @@
+{
+  "info": {
+    "_postman_id": "b793b5b0-ed98-4baa-91f3-ef4c16b63711",
+    "name": "Notificações API",
+    "description": "Testes da API do módulo de notificações",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52940633",
+    "_collection_link": "https://go.postman.co/collection/52940633-b793b5b0-ed98-4baa-91f3-ef4c16b63711?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Eventos",
+      "item": [
+        {
+          "name": "Request 1",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Request 2",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Request 3",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Request 4",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Request 5",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
