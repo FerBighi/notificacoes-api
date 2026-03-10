@@ -2,32 +2,30 @@
 
 // Dados iniciais (seed)
 let participantes = [
-    { id: 1, nome: "Ana Silva", email: "ana@email.com" },
-    { id: 2, nome: "Carlos Souza", email: "carlos@email.com" },
-    { id: 3, nome: "Maria Santos", email: "maria@email.com" },
+    { id: 1, nome: "Maria Fernanda", email: "maria.fernanda@email.com" },
+    { id: 2, nome: "Isadora", email: "isadora@email.com" },
+    { id: 3, nome: "Maria Luiza", email: "maria.luiza@email.com" },
 ];
 
 let proximoId = 4;
 
-// 👇 Implemente as funções abaixo seguindo o padrão do EventoModel
-
 function listarTodos() {
     // Retorne todos os participantes
-    // _________________________________
+    return participantes;
 }
 
 function buscarPorId(id) {
     // Use .find() para buscar pelo ID
-    // _________________________________
+    return participantes.find((p) => p.id === id);
 }
 
 function criar(dados) {
     const novoParticipante = {
         id: proximoId,
-        // Complete com os atributos necessários
-        // _________________________________
-        // _________________________________
+        nome: dados.nome,
+        email: dados.email
     };
+
     proximoId++;
     participantes.push(novoParticipante);
     return novoParticipante;
@@ -35,21 +33,32 @@ function criar(dados) {
 
 function atualizar(id, dados) {
     const index = participantes.findIndex((p) => p.id === id);
-    // Se não encontrar, retorne null
-    // Se encontrar, atualize e retorne o participante atualizado
-    // Use o spread operator como fizemos no EventoModel
-    // _________________________________
-    // _________________________________
-    // _________________________________
 
+    // Se não encontrar
+    if (index === -1) {
+        return null;
+    }
+
+    // Atualiza usando spread
+    participantes[index] = {
+        ...participantes[index],
+        ...dados
+    };
+
+    return participantes[index];
 }
 
 function deletar(id) {
-    // Encontre o index, se não existir retorne false
-    // Se existir, remova com splice e retorne true
-    // _________________________________
-    // _________________________________
-    // _________________________________
+    const index = participantes.findIndex((p) => p.id === id);
+
+    // Se não existir
+    if (index === -1) {
+        return false;
+    }
+
+    // Remove
+    participantes.splice(index, 1);
+    return true;
 }
 
 module.exports = {
