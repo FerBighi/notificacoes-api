@@ -40,7 +40,7 @@ function listarPorEvento(eventoId) {
 }
 
 // Listar todas as inscrições
-function listarTodas() {
+function listar() {
 
     return inscricoes;
 }
@@ -57,6 +57,6 @@ function cancelar(id) {
 module.exports = {
     criar,
     listarPorEvento,
-    listarTodas,
+    listar,
     cancelar,
 };
